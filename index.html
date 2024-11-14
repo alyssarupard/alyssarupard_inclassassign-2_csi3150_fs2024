@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive ABCs of CSS Technology</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive ABCs of CSS Technology</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Interactive ABCs of CSS Technology learning Website</h1>
-        <p>Click on the buttons below to reveal and learn the CSS technology features of the corresponding letters</p>
-        
-        <!-- Button row -->
-        <div class="buttons">
-            <button onclick="showFeature('a')">A</button>
-            <button onclick="showFeature('b')">B</button>
-            <button onclick="showFeature('c')">C</button>
-        </div>
-        
-        <!-- Feature display area -->
-        <div id="feature-display">
-            <!-- Dynamic content will appear here -->
-        </div>
-    </div>
+  <div class="container">
+    <h1>Welcome to the Interactive ABCs of CSS Technology Learning Website</h1>
+    <p>Click on the buttons below to reveal and learn the CSS technology features of the corresponding letters</p>
 
-    <script src="script.js"></script>
+    <div class="info-wrapper">
+      <div class="info-group">
+        <div class="info" id="infoA">
+          <img src="img/css-letter-a.png" alt="A is for Aspect-Ratio">
+          <button onclick="hideInfo('A')">Hide Result</button>
+        </div>
+        <button class="letter-button" id="buttonA" onclick="revealInfo('A')">A</button>
+      </div>
+
+      <div class="info-group">
+        <div class="info" id="infoB">
+          <img src="img/css-letter-b.png" alt="B is for Border">
+          <button onclick="hideInfo('B')">Hide Result</button>
+        </div>
+        <button class="letter-button" id="buttonB" onclick="revealInfo('B')">B</button>
+      </div>
+
+      <div class="info-group">
+        <div class="info" id="infoC">
+          <img src="img/css-letter-c.png" alt="C is for Colors">
+          <button onclick="hideInfo('C')">Hide Result</button>
+        </div>
+        <button class="letter-button" id="buttonC" onclick="revealInfo('C')">C</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
